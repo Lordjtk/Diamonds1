@@ -1,0 +1,53 @@
+---
+title: "Diamonds Exploration"
+author: "Judge Thomas Kearns"
+date: "2/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Reading the Excel File
+
+```{r}
+library(readxl)
+mydiamonds <- read_excel("diamonds.xlsx")
+mydiamonds
+```
+
+## Names of Variables
+
+```{r}
+names(mydiamonds)
+```
+
+## Top 6 Observations
+
+```{r}
+head(mydiamonds)
+```
+
+## Bottom 6 Observation
+
+```{r}
+tail(mydiamonds)
+```
+
+## Structure of Dataframe
+
+```{r}
+str(mydiamonds)
+```
+
+## Creating a new variable
+
+```{r}
+pricetable <- mydiamonds$price+mydiamonds$table
+pricetable
+
+head(pricetable)
+summary(pricetable)
+```
+
